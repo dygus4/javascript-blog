@@ -1,3 +1,4 @@
+{
 'use strict';
 
 /*
@@ -44,3 +45,38 @@ console.log(targetArticle);
   for(let link of links){
     link.addEventListener('click', titleClickHandler);
   }
+
+ const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles';
+
+function generateTitleLinks(){
+
+  /* remove contents of titleList */
+const titleList = document.querySelector(optTitleListSelector);
+function clearMessages(){
+	titleList.innerHTML = '';
+    
+}
+clearMessages();
+  /* for each article */
+const articles = optArticleSelector;
+for(let article of articles){
+    console.log(article);
+  }
+    /* get the article id */
+const articleId = article.getAttribute("id");
+console.log(articleId);
+    /* find the title element */
+
+    /* get the title from the title element */
+
+    /* create HTML of the link */
+
+    /* insert link into titleList */
+
+}
+
+generateTitleLinks();
+
+}
