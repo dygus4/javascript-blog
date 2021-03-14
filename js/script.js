@@ -40,11 +40,7 @@ console.log(targetArticle);
 }
 
   
-  const links = document.querySelectorAll('.titles a');
   
-  for(let link of links){
-    link.addEventListener('click', titleClickHandler);
-  }
 
  const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
@@ -61,7 +57,8 @@ function clearMessages(){
 clearMessages();
   /* for each article */
 const articles = document.querySelectorAll(optArticleSelector);
-let html = titleList.insertAdjacentHTML("afterbegin",title)
+let html = "";
+html.insertAdjacentHTML("afterbegin", title);
 for(let article of articles){
   
     /* get the article id */
@@ -76,9 +73,17 @@ for(let article of articles){
     /* insert link into titleList */
     html = html + linkHTML;
     consol.log(html);
+    }    
+    titleList.innerHTML = html;
+
+const links = document.querySelectorAll('.titles a');
+
+for(let link of links){
+    link.addEventListener('click', titleClickHandler);
 }
-titleList.innerHTML = html;
 }
+
+
 generateTitleLinks();
 
 
