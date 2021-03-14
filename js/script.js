@@ -60,23 +60,23 @@ function clearMessages(){
 }
 clearMessages();
   /* for each article */
-const articles = optArticleSelector;
+const articles = document.querySelectorAll(optArticleSelector);
 for(let article of articles){
-    console.log(article);
-  }
+  
     /* get the article id */
 const articleId = article.getAttribute("id");
 console.log(articleId);
     /* find the title element */
-
+const titleElement = article.querySelector(optTitleSelector);
     /* get the title from the title element */
-
+const title = titleElement.innerHTML;
     /* create HTML of the link */
-
+const linkHTML = '<li><a href="#' + articleId + '"><span>' + title + '</span></a></li>';
     /* insert link into titleList */
-
+titleList.innerHTML = titleList.innerHTML + linkHTML;
 }
-
+}
 generateTitleLinks();
+
 
 }
