@@ -58,7 +58,7 @@ clearMessages();
   /* for each article */
 const articles = document.querySelectorAll(optArticleSelector);
 let html = "";
-html.insertAdjacentHTML("afterbegin", title);
+
 for(let article of articles){
   
     /* get the article id */
@@ -71,6 +71,8 @@ for(let article of articles){
     /* create HTML of the link */
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + title + '</span></a></li>';
     /* insert link into titleList */
+    const d1 =document.querySelector(optTitleListSelector);
+    d1.insertAdjacentHTML("afterend",linkHTML);
     html = html + linkHTML;
     consol.log(html);
     }    
