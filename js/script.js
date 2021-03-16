@@ -1,12 +1,7 @@
 {
 'use strict';
 
-/*
-document.getElementById('test-button').addEventListener('click', function(){
-    const links = document.querySelectorAll('.titles a');
-    console.log('links:', links);
-  });
-*/
+
 const titleClickHandler = function(event){
     event.preventDefault();
     const clickedElement = this;
@@ -59,6 +54,7 @@ clearMessages();
 const articles = document.querySelectorAll(optArticleSelector);
 let html = "";
 
+
 for(let article of articles){
   
     /* get the article id */
@@ -71,12 +67,12 @@ for(let article of articles){
     /* create HTML of the link */
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + title + '</span></a></li>';
     /* insert link into titleList */
-    const d1 =document.querySelector(optTitleListSelector);
-    d1.insertAdjacentHTML("afterend",linkHTML);
+    
     html = html + linkHTML;
-    consol.log(html);
+    
     }    
     titleList.innerHTML = html;
+    
 
 const links = document.querySelectorAll('.titles a');
 
