@@ -1,0 +1,144 @@
+{
+function playGame(playerInput){
+
+clearMessages()
+
+    function getMoveName(argMoveId){
+        if(argMoveId == 1){
+        return 'kamień';
+        } else if(argMoveId == 2){
+            return 'papier';
+        } else if(argMoveId == 3){
+            return 'nożyce';
+        }  else {
+        printMessage('Nie znam ruchu o id ' + argMoveId + '.');
+        return 'nieznany ruch';
+        }
+    }
+
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
+
+    console.log('Wylosowana liczba to: ' + randomNumber);
+
+    const computerMove = getMoveName(randomNumber);
+
+    printMessage('Mój ruch to: ' + computerMove);
+
+
+
+    /*let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');*/
+
+    console.log('Gracz wpisał: ' + playerInput);
+
+    const playerMove = getMoveName(playerInput);
+
+    printMessage('Twój ruch to: ' + playerMove);
+
+
+
+    function displayResult(argComputerMove, argPlayerMove){
+        if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+        printMessage('Ty wygrywasz!');
+        } else if( argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
+            printMessage('Remis!');
+        } else if( argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
+            printMessage('Ty przegrywasz!');
+        } else if( argComputerMove == 'papier' && argPlayerMove == 'papier'){
+            printMessage('Remis!');
+        } else if( argComputerMove == 'papier' && argPlayerMove == 'kamień'){
+            printMessage('Ty przegrywasz!');
+        } else if( argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
+            printMessage('Ty wygrywasz!');
+        } else if( argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
+            printMessage('Ty przegrywasz!');
+        } else if( argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
+            printMessage('Ty wygrywasz!');
+        } else if( argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
+            printMessage('Remis!');
+        } else {argPlayerMove == "nieznany ruch"
+        printMessage('Tym razem przegrywasz :(');
+        }
+    }
+
+    displayResult (computerMove, playerMove);
+
+
+}
+document.getElementById('play-rock').addEventListener('click', function(){
+    playGame("1");
+  });
+document.getElementById('play-paper').addEventListener('click', function(){
+    playGame('2');
+  });
+document.getElementById('play-scissors').addEventListener('click', function(){
+    playGame('3');
+  });
+}
+
+
+
+
+
+<li><a href="#article-1" class="active"><span>Article 1</span></a></li>
+                    <li><a href="#article-2"><span>Article 2</span></a></li>
+                    <li><a href="#article-3"><span>Article 3</span></a></li>
+                    <li><a href="#article-4"><span>Article 4</span></a></li>
+                    <li><a href="#article-5"><span>Article 5</span></a></li>
+                    <li><a href="#article-6"><span>Article 6</span></a></li>
+                    <li><a href="#article-7"><span>Article 7</span></a></li>
+                    <li><a href="#article-8"><span>Article 8</span></a></li>
+                    <li><a href="#article-9"><span>Article 9</span></a></li>
+                    <li><a href="#article-10"><span>Article 10</span></a></li>
+
+
+
+
+
+Witam, robię końcówkę 6.4 i mam zamiast titleList.innerHTML = titleList.innerHTML + linkHTML; wykorzystać funkcję insertAdjacentHTML. Próbuje to zrobić wg opisu funkcji, ale chyba nie do końca ją rozumiem. 
+Witam, robię końcówkę 6.4 i mam zamiast titleList.innerHTML = titleList.innerHTML + linkHTML; wykorzystać funkcję insertAdjacentHTML. Próbuje to zrobić wg opisu funkcji, ale chyba nie do końca ją rozumiem.
+
+
+Witam, robię końcówkę 6.4 i mam zamiast titleList.innerHTML = titleList.innerHTML + linkHTML; wykorzystać funkcję insertAdjacentHTML. Próbuje to zrobić wg opisu funkcji, ale chyba nie do końca ją rozumiem. 
+Witam, robię końcówkę 6.4 i mam zamiast titleList.innerHTML = titleList.innerHTML + linkHTML; wykorzystać funkcję insertAdjacentHTML. Próbuje to zrobić wg opisu funkcji, ale chyba nie do końca ją rozumiem.
+
+Witam, robię końcówkę 6.4 i mam zamiast titleList.innerHTML = titleList.innerHTML + linkHTML; wykorzystać funkcję insertAdjacentHTML. Próbuje to zrobić wg opisu funkcji, ale chyba nie do końca ją rozumiem. 
+
+Witam, mam problem z zadaniem 6.4 - insertAdjacentHTML. Mianowicie nie działa mi ta funkcja. Nie wiem czy poprawnie ją zapisałem. Wg instrukcji to powinno brzmieć: let html = _________; -----> html.insertAdjacentHTML("afterend","_____"); - tylko nie wiem co dać w podkreśleniach...
+
+
+const titleList =document.querySelector(optTitleListSelector);
+const titleList =document.querySelector(optTitleListSelector);
+titleList.insertAdjacentHTML("beforebegin",linkHTML);
+
+		    <li><a href="#">design</a> <span>(6)</span></li>
+                    <li><a href="#">code</a> <span>(5)</span></li>
+                    <li><a href="#">tutorials</a> <span>(4)</span></li>
+                    <li><a href="#">reviews</a> <span>(4)</span></li>
+                    <li><a href="#">news</a> <span>(6)</span></li>
+
+
+allTagsHTML += '<li><a href="#tag-' + tag + '" class=" ' + calculateTagClass(allTags[tag], tagsParams) + '">' + tag + '</a><span>(' + allTags[tag] + ')</span></li>';
+
+
+		    <li>
+                      <a href="#">
+                        <span class="author-name">Kitty Toebean</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="author-name">Theo Tabby</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="author-name">George Tuxedo</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span class="author-name">Marion Berry</span>
+                      </a>
+                    </li>
+
+allAuthorsHTML += articleAuthor + ' (' + allAuthors[articleAuthor] + ') ';
